@@ -14,8 +14,8 @@ export class ProductsController {
   async create(@Body() product:  Product) {
     const property1 = new Property();
     property1.name = "Ahşap";
-    //const property2 = new Property();
-    //property2.name = "Metal";
+    const property2 = new Property();
+    property2.name = "Metal";
     product.properties = [property1];
     this.productsService.create(product);
   }
